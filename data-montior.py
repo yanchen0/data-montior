@@ -21,7 +21,7 @@ Base=declarative_base()
 
 class Mybase(Base):
 	__tablename__ ='decryption-tools'
-	id=Column(Integer,name='Id',primary_key=True)
+	id=Column(Integer,name='Id',primary_key=True, autoincrement=True)
 	name=Column(String(255),nullable=False)
 	def __repr__(self):
 		return "{}".format(self.name)
